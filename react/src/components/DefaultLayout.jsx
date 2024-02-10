@@ -1,10 +1,11 @@
 import React from "react";
+
 import { Outlet } from "react-router-dom";
 
-export default function Users() {
+export default function DefaultLayout() {
     return (
         <div>
-            users
+            DefaultLayout
             <Outlet />
         </div>
     );
