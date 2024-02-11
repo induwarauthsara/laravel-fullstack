@@ -113,13 +113,13 @@ table {
     border-collapse: collapse;
 }
 
-table>thead>tr>th {
+table > thead > tr > th {
     text-align: left;
     padding: 0.5rem 0.5rem;
     background-color: #efefef;
 }
 
-table>tbody>tr>td {
+table > tbody > tr > td {
     padding: 0.5rem 0.5rem;
     border-bottom: 1px solid #efefef;
     white-space: nowrap;
@@ -152,7 +152,6 @@ table>tbody>tr>td {
     color: white;
     border-radius: 0.5rem;
 }
-
 
 /* Login/Signup forms*/
 
@@ -191,7 +190,6 @@ table>tbody>tr>td {
     text-decoration: none;
 }
 
-
 /* Login/Signup form */
 
 #defaultLayout {
@@ -204,7 +202,7 @@ table>tbody>tr>td {
     padding: 1rem;
 }
 
-#defaultLayout aside>a {
+#defaultLayout aside > a {
     display: block;
     padding: 0.75rem 1rem;
     border-radius: 6px;
@@ -213,7 +211,7 @@ table>tbody>tr>td {
     transition: all 0.2s;
 }
 
-#defaultLayout aside>a:hover {
+#defaultLayout aside > a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -229,6 +227,7 @@ table>tbody>tr>td {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #10c210;
 }
 
 #defaultLayout main {

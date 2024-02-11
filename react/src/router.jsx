@@ -1,7 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 
 import Login from "./views/login.jsx";
-import Singup from "./views/singup.jsx";
+import Signup from "./views/signup.jsx";
 import Users from "./views/users.jsx";
 import Dashboard from "./views/dashboard.jsx";
 
@@ -19,13 +19,22 @@ const router = createBrowserRouter([
                 element: <Navigate to="/users" />,
             },
             {
-                path: "/Dashboard",
+                path: "/dashboard",
                 element: <Dashboard />,
             },
             {
                 path: "/users",
                 element: <Users />,
             },
+
+            // {
+            //     path: "/users/new",
+            //     element: <UserForm key="userCreate" />,
+            // },
+            // {
+            //     path: "/users/:id",
+            //     element: <UserForm key="userUpdate" />,
+            // },
         ],
     },
     {
@@ -37,8 +46,8 @@ const router = createBrowserRouter([
                 element: <Login />,
             },
             {
-                path: "/singup",
-                element: <Singup />,
+                path: "/signup",
+                element: <Signup />,
             },
         ],
     },
