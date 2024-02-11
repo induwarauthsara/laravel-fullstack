@@ -1,30 +1,43 @@
-import { CreateContex } from 'react';
+import { createContext, useContext, useState } from "react";
 
-const StateContext = CreateContex({
-    CurrentUser: null,
+import PropTypes from "prop-types";
+
+const StateContext = createContext({
+    user: null,
     token: null,
-
+    setUser: () => {},
+    setToken: () => {},
 });
 
-export default StateContex = ({ children }) => {
-    const [user, setUser] = useState(null);
-    const [token, _setToken] = useState(null);
+export const ContextProvider = ({ children }) => {
+    const [user, setUser] = useState({});
+    const [token, _setToken] = useState(localStorage.getItem("ACCESS_TOKEN"));
 
     const setToken = (token) => {
         _setToken(token);
         if (token) {
-            localStorage.setItem('token', token);
+            localStorage.setItem("ACCESS_TOKEN", token);
         } else {
-            localStorage.removeItem('token');
+            localStorage.removeItem("ACCESS_TOKEN");
         }
-    }
-}
+    };
 
     return (
-        <StateContext.Provider value={{
-
-         }}>
+        <StateContext.Provider
+            value={{
+                user,
+                token,
+                setToken,
+                setUser,
+            }}
+        >
             {children}
         </StateContext.Provider>
     );
-}
+};
+
+ContextProvider.propTypes = {
+    children: PropTypes.any,
+};
+
+export const useStateContext = () => useContext(StateContext);

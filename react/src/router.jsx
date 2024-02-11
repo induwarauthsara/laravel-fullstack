@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 
 import Login from "./views/login.jsx";
 import Singup from "./views/singup.jsx";
